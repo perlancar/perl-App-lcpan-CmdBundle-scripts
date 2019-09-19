@@ -3,7 +3,7 @@ package App::lcpan::Cmd::scripts_for;
 # DATE
 # VERSION
 
-use 5.010;
+use 5.010001;
 use strict;
 use warnings;
 
