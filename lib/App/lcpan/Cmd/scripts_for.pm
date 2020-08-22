@@ -64,12 +64,11 @@ sub handle_cmd {
 
     my $sth = $dbh->prepare("SELECT
   script.name name,
-  dist.name dist,
+  file.dist_name dist,
   script.abstract abstract
 FROM script
 LEFT JOIN file ON script.file_id=file.id
-LEFT JOIN dist ON file.id=dist.file_id
-WHERE dist.name IN (".join(",", map {$dbh->quote($_->{dist})} @{$res->[2]}).")
+WHERE file.dist_name IN (".join(",", map {$dbh->quote($_->{dist})} @{$res->[2]}).")
 ORDER BY name DESC");
     $sth->execute();
 
