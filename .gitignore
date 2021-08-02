@@ -2,3 +2,4 @@ App-lcpan-CmdBundle-scripts-*
 .build
 *~
 nytprof*
+.DS_Store
